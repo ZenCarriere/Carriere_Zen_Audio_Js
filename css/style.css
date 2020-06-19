@@ -3,6 +3,13 @@
   display:none;
 }
 
+.trackref
+{
+  width:255px;
+  padding:8px;
+  cursor:pointer;
+}
+
 audio 
 {
   display:block !important;
@@ -12,3 +19,4 @@ button
 {
   margin-right: 8px;
 }
+
