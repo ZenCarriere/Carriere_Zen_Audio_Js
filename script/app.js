@@ -1,17 +1,19 @@
 (() => {
-	// set up the puzzle pieces and boards
-	const puzzleButtons = document.querySelectorAll('#buttonHolder img');
+	console.log('fired!');
 
-	function changeImageSet() {
-		// change all the image elements on the page -> draggable image sources,
-		// and set the drop zone background
+	let audioControls = document.querySelectorAll(".controls"),
+	audio = document.querySelector('audio');
 
+	function playAudio() {
+		audio.play();
+	}
+
+	function rewindAudio(){
+		audio.pause();
+		audio.currentTime = 0;
 		debugger;
 	}
 
-	// add event handling here -> how is the user going to use our app?
-	// what triggers do we need?
-
-	// click on the bottom buttons to change the puzzle image we're working with
-	puzzleButtons.forEach(button => button.addEventListener('click', changeImageSet));
-})();
+	audioControls[0].addEventListener("click",playAudio);
+	audioControls[1].addEventListener("click",rewindAudio);
+});
